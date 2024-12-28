@@ -1,0 +1,88 @@
+
+
+// Variables
+$color-fondo: hwb(194 3% 45%);
+$color-texto: #ffffff;
+$font-family: Arial, sans-serif;
+$color-destacado-hover:  hsl(198, 40%, 25%);
+$active-color: hsl(198, 40%, 25%);
+
+
+// Estilos base para el cuerpo y el encabezado
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+}
+
+header {
+    background-color: white;
+
+}
+
+.brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+  margin: 20px;
+}
+
+// Estilos para la barra de navegación
+nav {
+    background-color: $color-fondo;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    
+
+    li {
+      margin: 0 10px;
+      width: 150px;
+      
+      
+      
+      a {
+          padding: 10px;
+          text-decoration: none;
+        color: $color-texto;
+        &:hover {
+            background-color: $color-destacado-hover;
+            color: $color-texto;
+        }
+      }
+    }
+  }
+
+    // Media query para resoluciones menores
+    @media screen and (max-width: 767px) {
+        .menu {
+            flex-direction: column;
+            width: 100%;
+            background-color: $color-fondo;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+
+      
+            li {
+              margin: 10px 0;
+              width: 100%;
+            }
+        }
+      
+    
+    }
+
+

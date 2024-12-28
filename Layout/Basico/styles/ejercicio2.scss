@@ -1,0 +1,63 @@
+@use "temaA" as *; // Cambia a temaA o temaB según necesidad
+
+.container {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+// Tema 1
+.theme {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: 40px;
+  margin-top: 40px;
+  color: black;
+  font-family: $theme-font;
+  text-align: center;
+}
+
+.theme .box {
+  width: 130px;
+  height: 100px;
+  margin: 10px;
+  gap: 10px;
+  display: flex;
+  // flex-direction: column;
+  margin-inline: 40px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  border: $theme-border;
+}
+
+.darken-1 {
+    background: $theme1-color;
+}
+
+.darken-2 {
+    background: $theme2-color;
+}
+
+.darken-3 {
+    background: $theme3-color;
+}
+
+.font {
+  font-family: $theme-font;
+}
+
+.font-1 {
+  font-family: $theme-font;
+  font-weight: bold;
+}
+
+.darken-shadow {
+    box-shadow: $theme-box-shadow;
+}
+
+.color-box-text {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}

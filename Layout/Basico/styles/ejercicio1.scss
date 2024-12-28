@@ -1,0 +1,52 @@
+@use "sass:color";
+
+// Paletas de colores
+$paletas: (
+  "red": #e74c3c,
+  "blue": #3498db,
+  "green": #2ecc71
+);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@each $name, $base-color in $paletas {
+  .#{$name}-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .box-#{$name} {
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @for $i from 1 through 4 {
+    .darken-#{$name}-#{$i} {
+      background-color: color.scale($base-color, $lightness: -$i * 10%);
+    }
+
+    .lighten-#{$name}-#{$i} {
+      background-color: color.scale($base-color, $lightness: $i * 10%);
+    }
+  }
+
+  .base-#{$name} {
+    background-color: $base-color;
+    text-align: center;
+    display: flex;
+  }
+}
