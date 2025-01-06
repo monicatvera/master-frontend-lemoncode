@@ -52,7 +52,7 @@ Los archivos transpilados se guardarán en la carpeta configurada en tu proyecto
 Una vez que los archivos TypeScript han sido transpilados, puedes ejecutar cada ejercicio usando Node.js. Por ejemplo:
 
 ```bash
-node transpiled/02-entregables/ejercicio-01.js
+node transpiled/ejercicio-01.js
 ```
 
 Reemplaza `ejercicio-01.js` por el nombre del archivo que deseas ejecutar.
