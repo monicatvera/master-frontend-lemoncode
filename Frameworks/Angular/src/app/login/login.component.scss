@@ -1,0 +1,34 @@
+@use '@angular/material' as mat;
+
+$indigo-p: mat.define-palette(mat.$indigo-palette);
+$warn-p: mat.define-palette(mat.$red-palette);
+
+.container {
+  min-width: 250px;
+  max-width: 1200px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .field {
+    min-width: 250px;
+    max-width: 960px;
+    font-size: 0.8rem;
+  }
+
+  .errors {
+    height: min-content;
+  }
+
+  .feedback {
+    color: mat.get-color-from-palette($warn-p);
+  }
+
+  .spinner {
+    max-width: 2rem;
+  }
+}

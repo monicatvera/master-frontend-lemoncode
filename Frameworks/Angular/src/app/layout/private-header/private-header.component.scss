@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+
+$indigo-p: mat.define-palette(mat.$indigo-palette);
+
+.private-header {
+  max-width: 100%;
+  background: mat.get-color-from-palette($indigo-p, 'darker');
+  color: mat.get-color-from-palette($indigo-p, 'darker-contrast');
+
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .logo {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+
+  .login {
+    display: flex;
+    gap: 1rem;
+    max-width: 320px;
+
+    .user-chip {
+      background: mat.get-color-from-palette($indigo-p);
+      color: mat.get-color-from-palette($indigo-p, 'darker-contrast');
+      align-self: center;
+
+      @media screen and (max-width:480px) {
+        max-width: min-content;
+
+        mat-icon {
+          margin: 0 auto;
+        }
+
+        .username-text {
+          display: none;
+        }
+      }
+    }
+  }
+
+}

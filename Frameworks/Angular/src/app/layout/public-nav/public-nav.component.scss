@@ -1,0 +1,8 @@
+@use '@angular/material' as mat;
+
+$indigo-p: mat.define-palette(mat.$indigo-palette);
+
+.selected {
+  background: mat.get-color-from-palette($indigo-p, 'lighter');
+  color: mat.get-color-from-palette($indigo-p, 'default');
+}

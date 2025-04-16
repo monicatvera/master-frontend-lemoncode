@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+
+$my-palette: mat.define-palette(mat.$indigo-palette);
+$darker: mat.get-color-from-palette($my-palette, 'darker');
+
+.footer__firstline {
+  width: 100%;
+  background: $darker;
+  color: mat.get-color-from-palette($my-palette, 'darker-contrast');
+  font-size: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-height: 4vh;
+  padding: 0.6rem 1.5rem;
+
+  p {
+    margin: 0;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: text-decoration 0.2s;
+
+      .github-icon {
+        width: 0.95rem;
+        height: 0.95rem;
+        vertical-align: middle;
+        display: inline-block;
+        position: relative;
+        top: 1px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
